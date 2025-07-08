@@ -19,31 +19,7 @@ Depth_Estimation：是用于双目深度估计性能评估。
 # 数据集格式
 
 格式示例：
-
-> datasets_root/
-> ├── box_80
-> │   ├── dataste_0
-> │   │   ├── image
-> │   │   ├── imu
-> │   │   ├── pcd
-> │   │   └── temp
-> │   │       ├── rectify_image
-> │   │       ├── split_image
-> │   │       ├── syn_data
-> │   │       └── visual_depth_valid_point
-> │   └── result
-> │       ├── crop
-> │       ├── gt_lidar
->
-> │       ├── gt_foundation
-> │       ├── images
-> │       ├── predict
-> │       ├── roi_area
-> │       │   ├── roi_area_json
-> │       │   └── roi_area_visual
-> │       └── visual
->
-> │       └── visual-gt-foundation
+![alt text](data/tree.jpg)
 
 1.datasets_root：存放数据集的根目录
 
@@ -75,7 +51,7 @@ dds-cloudapi-sdk：通用障碍物检测模块，可以获取感兴趣区域，�
 
 stereo_calib： 相机标定模块，用于标定相机的内参 。
 
-FoundationStereo： 双目深度估计大模型，在没有真值的情况，可以使用此模型的预测结果作为真值 。
+FoundationStereo： 双目深度估计大模型，在没有真值的情况，可以使用此模型的预测结果作为真值(这里代码是开源代码，由于代码太大没有上传) 。
 
 SteroDepthEstimation： 双目深度预测评估模块. SteroDepthEstimation中已经集成各个模块，可以通过任务类型来绝对使用哪个模块。
 
